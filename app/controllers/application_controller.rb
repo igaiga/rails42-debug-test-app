@@ -8,4 +8,6 @@ class ApplicationController < ActionController::Base
     g "#{self.class.name}##{action_name}"
   end
 
+  before_action ->{ console }
+
 end
