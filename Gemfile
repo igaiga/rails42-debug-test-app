@@ -44,5 +44,6 @@ group :development, :test do
 
   gem 'g'
   gem 'terminal-notifier'
+  gem 'rails-footnotes', '~> 4.0'
 end
 
