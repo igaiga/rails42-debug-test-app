@@ -24,6 +24,11 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
+    g params[:book]
+    g "💛💙💜💚💔💗💓💕💖💞💘"
+    logger.debug "************💛💙💜💚💔💗💓💕💖💞💘"
+    logger.debug params[:book]
+    logger.debug "************💛💙💜💚💔💗💓💕💖💞💘"
     @book = Book.new(book_params)
 
     respond_to do |format|
