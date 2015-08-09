@@ -3,11 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :g_action
-  def g_action
-    g "#{self.class.name}##{action_name}"
-  end
-
-  before_action ->{ console }
+  before_action { g "#{self.class.name}##{action_name}" }
+  # it's same as before_action :action_name and def action_name method.
+  # before_action { console }
 
 end
